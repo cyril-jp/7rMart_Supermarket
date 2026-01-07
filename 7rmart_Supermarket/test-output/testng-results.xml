@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-06T16:35:32 IST" name="Suite" finished-at="2026-01-06T16:35:53 IST" duration-ms="20926">
+    <groups>
+      <group name="regression">
+        <method signature="ManageContactTest.verifyContact()[pri:1, instance:testscript.ManageContactTest@7c7a06ec]" name="verifyContact" class="testscript.ManageContactTest"/>
+        <method signature="ManageFooterTextTest.verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@3eb25e1a]" name="verifyFooterText" class="testscript.ManageFooterTextTest"/>
+        <method signature="ManageNewsTest.verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@6743e411]" name="verifyManageNews" class="testscript.ManageNewsTest"/>
+      </group> <!-- regression -->
+    </groups>
+    <test started-at="2026-01-06T16:35:32 IST" name="Test" finished-at="2026-01-06T16:35:53 IST" duration-ms="20926">
+      <class name="testscript.ManageNewsTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@6743e411]" started-at="2026-01-06T16:35:41 IST" name="browserInitialization" finished-at="2026-01-06T16:35:44 IST" duration-ms="3065" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@6743e411]" started-at="2026-01-06T16:35:44 IST" name="verifyManageNews" finished-at="2026-01-06T16:35:47 IST" duration-ms="2795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyManageNews -->
+      </class> <!-- testscript.ManageNewsTest -->
+      <class name="testscript.ManageContactTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@7c7a06ec]" started-at="2026-01-06T16:35:32 IST" name="browserInitialization" finished-at="2026-01-06T16:35:35 IST" duration-ms="2973" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyContact()[pri:1, instance:testscript.ManageContactTest@7c7a06ec]" started-at="2026-01-06T16:35:35 IST" name="verifyContact" finished-at="2026-01-06T16:35:41 IST" duration-ms="5947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContact -->
+      </class> <!-- testscript.ManageContactTest -->
+      <class name="testscript.ManageFooterTextTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageFooterTextTest@3eb25e1a]" started-at="2026-01-06T16:35:47 IST" name="browserInitialization" finished-at="2026-01-06T16:35:49 IST" duration-ms="2285" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@3eb25e1a]" started-at="2026-01-06T16:35:49 IST" name="verifyFooterText" finished-at="2026-01-06T16:35:53 IST" duration-ms="3749" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFooterText -->
+      </class> <!-- testscript.ManageFooterTextTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
