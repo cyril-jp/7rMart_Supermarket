@@ -16,7 +16,7 @@ public class ExcelUtility {
 	static XSSFWorkbook w;
 	static XSSFSheet sh;
 
-	public static String readStringData(int row, int col,String sheet) throws IOException {
+	public static String readStringData(int row, int col, String sheet) throws IOException {
 		String filepath = Constant.TESTDATAFILE;
 		f = new FileInputStream(filepath);
 		w = new XSSFWorkbook(f);
@@ -27,7 +27,7 @@ public class ExcelUtility {
 
 	}
 
-	public static String readIntegerData(int row, int col,String sheet) throws IOException {
+	public static String readIntegerData(int row, int col, String sheet) throws IOException {
 		String filepath = Constant.TESTDATAFILE;
 		f = new FileInputStream(filepath);
 		w = new XSSFWorkbook(f);
@@ -36,14 +36,13 @@ public class ExcelUtility {
 		XSSFCell c = r.getCell(col);
 //		int val =   (int) c.getNumericCellValue();  convert double to int using typecasting
 //		return String.valueOf(val);   convert int to string using valueOf() method
-		//return val;
+		// return val;
 //Phone numbers are too large for int
 //		👉 Example: 9876543210 ❌ (int max = 2,147,483,647)
 //
 //		So the value becomes incorrect or blank in UI, even though no exception occurs.
-		   DataFormatter formatter = new DataFormatter();
-		    return formatter.formatCellValue(c); // ⭐ KEY LINE
+		DataFormatter formatter = new DataFormatter();
+		return formatter.formatCellValue(c); // ⭐ KEY LINE
 	}
-
 
 }

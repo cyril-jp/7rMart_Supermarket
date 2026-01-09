@@ -3,58 +3,76 @@ package pages;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import constant.Constant;
+import utilities.FileUploadUtility;
+import utilities.PageUtility;
+
 public class ManageCategoryPage {
 	public WebDriver driver;
-	@FindBy(xpath="//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-category']")WebElement CategoryMoreInfo;
-	@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement NewButton;
-	@FindBy(xpath="//input[@id='category']")WebElement CategoryField;
-	@FindBy(xpath="//input[@id='main_img']")WebElement ChooseFile;
-	@FindBy(xpath="//button[text()='Save']")WebElement SaveButton;
-	@FindBy(xpath="//div[contains(@class,' alert-success')]")WebElement AlertCategory;
-
-	
-	
+	PageUtility pageutility = new PageUtility();
+//	@FindBy(xpath="//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-category']")WebElement CategoryMoreInfo;
+	@FindBy(xpath = "//a[@onclick='click_button(1)']")
+	WebElement NewButton;
+	@FindBy(xpath = "//input[@id='category']")
+	WebElement CategoryField;
+	@FindBy(xpath = "//input[@id='main_img']")
+	WebElement ChooseFile;
+	@FindBy(xpath = "//button[text()='Save']")
+	WebElement SaveButton;
+	@FindBy(xpath = "//div[contains(@class,' alert-success')]")
+	WebElement AlertCategory;
 
 	public ManageCategoryPage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		// TODO Auto-generated constructor stub
 	}
-	public void clickCategoryMoreInfo()
-	{
-		CategoryMoreInfo.click();
-	}
-	public void clickNew()
-	{
+//	public void clickCategoryMoreInfo()
+//	{
+//		CategoryMoreInfo.click();
+//	}
+
+	public ManageCategoryPage clickNew() {
 		NewButton.click();
-		
+		return this;
+
 	}
-	public void enterCategoryname(String categoryname)
-	{
-		CategoryField.sendKeys(categoryname);	
+
+	public ManageCategoryPage enterCategoryname(String categoryname) {
+		CategoryField.sendKeys(categoryname);
+		return this;
 	}
-	
-	 public WebElement getChooseFileElement() 
-	 {
-	        return ChooseFile;
-	    }
+
+//	public WebElement getChooseFileElement() {
+//		return ChooseFile;
+//	}
+	public ManageCategoryPage getChooseFileElement() {
+		FileUploadUtility.fileUploadUsingSendkeys(ChooseFile, Constant.IMAGEDATAFILE);
+		return this;
+	}
+
 //	public Boolean verifyAdminUserPageIsDisplayed()
 //	{
 //		return AdminUsersPage.isDisplayed();
 //		
 //	}
-	public void clickSaveButton()
-	{
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", SaveButton);
+	public ManageCategoryPage clickSaveButton() {
+//		pageutility.javaScriptExecutorMethod(SaveButton);
+
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].click();", SaveButton);
+		Actions actions = new Actions(driver);
+		actions.click(SaveButton).perform();
+		return this;
+
 	}
-	
-	public Boolean verifyCategoryAlertIsDisplayed()
-	{
+
+	public Boolean verifyCategoryAlertIsDisplayed() {
 		return AlertCategory.isDisplayed();
-		
+
 	}
 }

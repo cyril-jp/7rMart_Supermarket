@@ -2,8 +2,7 @@ package utilities;
 
 import com.github.javafaker.Faker;
 
-public class FakerUtility 
-{
+public class FakerUtility {
 	Faker faker = new Faker();
 
 	public String creatARandomFirstName() {

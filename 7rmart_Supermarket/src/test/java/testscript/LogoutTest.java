@@ -26,7 +26,7 @@ public class LogoutTest extends Base
 	    logoutpage.logOut();
 //		logoutpage.verifySuccessfullyLoggedOut();
 		boolean alert=logoutpage.verifySuccessfullyLoggedOut();
-		Assert.assertTrue(alert);
+		Assert.assertTrue(alert,"Error occured :Not able to log out");
 	}
 }
 

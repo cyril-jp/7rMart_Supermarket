@@ -15,5 +15,4 @@ public class ExtendReportUtility {
 		return extentReports;
 	}
 
-
 }
