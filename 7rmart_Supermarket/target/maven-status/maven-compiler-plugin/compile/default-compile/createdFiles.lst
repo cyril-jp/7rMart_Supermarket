@@ -1,4 +1,5 @@
 pages\LoginPage.class
+utilities\ScreenshotUtility.class
 utilities\ExtendReportUtility.class
 utilities\FakerUtility.class
 utilities\ExcelUtility.class
