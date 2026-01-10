@@ -54,12 +54,6 @@ public class ManageCategoryPage {
 		FileUploadUtility.fileUploadUsingSendkeys(ChooseFile, Constant.IMAGEDATAFILE);
 		return this;
 	}
-
-//	public Boolean verifyAdminUserPageIsDisplayed()
-//	{
-//		return AdminUsersPage.isDisplayed();
-//		
-//	}
 	public ManageCategoryPage clickSaveButton() {
 //		pageutility.javaScriptExecutorMethod(SaveButton);
 
