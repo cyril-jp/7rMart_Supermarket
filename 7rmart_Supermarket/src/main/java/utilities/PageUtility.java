@@ -26,22 +26,22 @@ public class PageUtility {
 		select.selectByIndex(index);
 	}
 
-	public void dragAndDropMethod(WebElement source, WebElement destination) {
+	public void dragAndDropMethod(WebElement source, WebElement destination,WebDriver driver) {
 		Actions actions = new Actions(driver);
 		actions.dragAndDrop(source, destination).perform();
 	}
 
-	public void rightClickMethod(WebElement element) {
+	public void rightClickMethod(WebElement element,WebDriver driver) {
 		Actions actions = new Actions(driver);
 		actions.contextClick(element).perform();
 	}
 
-	public void doubleClickMethod(WebElement element) {
+	public void doubleClickMethod(WebElement element,WebDriver driver) {
 		Actions actions = new Actions(driver);
 		actions.doubleClick(element).perform();
 	}
 
-	public void mouseHoverMethod(WebElement element) {
+	public void mouseHoverMethod(WebElement element,WebDriver driver) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).perform();
 	}
@@ -51,12 +51,12 @@ public class PageUtility {
 		actions.click(element).perform();
 	}
 
-	public void javaScriptExecutorMethod(WebElement element) {
+	public void javaScriptExecutorMethod(WebElement element,WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", element);
 	}
 
-	public void javaScriptExecutorInputFieldMethod(WebElement inputfield) {
+	public void javaScriptExecutorInputFieldMethod(WebElement inputfield,WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].value='cyril';", inputfield);
 

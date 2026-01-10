@@ -65,8 +65,11 @@ public class ManageCategoryPage {
 
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("arguments[0].click();", SaveButton);
-		Actions actions = new Actions(driver);
-		actions.click(SaveButton).perform();
+		
+//		Actions actions = new Actions(driver);
+//		actions.click(SaveButton).perform();
+		
+		pageutility.ClickMethod(SaveButton,driver);
 		return this;
 
 	}
