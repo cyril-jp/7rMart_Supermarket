@@ -3,6 +3,7 @@ package testscript;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import constant.Constant;
@@ -54,13 +55,14 @@ public void verifyTheUserIsAbleToLoginWithCorrectUsernameIncorrectPin() throws I
 	boolean alert=loginpage.verifyAlertIsDisplayed();
 	Assert.assertTrue(alert,Constant.LOGININVALIDPIN);
 }
-@Test(priority=4,description="Testcase to check user is login with invalid username and invalid password")
-public void verifyTheUserIsAbleToLoginWithIncorrectUsernameIncorrectPin() throws IOException
+@Test(priority=4,description="Testcase to check user is login with invalid username and invalid password",dataProvider="LoginProvider")
+public void verifyTheUserIsAbleToLoginWithIncorrectUsernameIncorrectPin(String user,String pin) throws IOException
 {
 //	String user="cyril";
 //	String pin="alan";
-	String user=ExcelUtility.readStringData(4, 0, "LoginPage");
-	String pin=ExcelUtility.readStringData(4, 1, "LoginPage");
+//	String user=ExcelUtility.readStringData(4, 0, "LoginPage");
+//	String pin=ExcelUtility.readStringData(4, 1, "LoginPage");
+	
 	LoginPage loginpage=new LoginPage(driver);
 	loginpage.enterUserName(user);
 	loginpage.enterPassword(pin);
@@ -68,6 +70,9 @@ public void verifyTheUserIsAbleToLoginWithIncorrectUsernameIncorrectPin() throws
 	boolean alert=loginpage.verifyAlertIsDisplayed();
 	Assert.assertTrue(alert,Constant.LOGININVALIDCREDENTIALS);
 }
-	
+@DataProvider(name="LoginProvider")
+public Object[][] getDataFromTestData() throws IOException{
+	return new Object[][] {{ExcelUtility.readStringData(4, 0,"loginpage"),ExcelUtility.readStringData(4,1,"loginpage")}};	
+}
 }
 

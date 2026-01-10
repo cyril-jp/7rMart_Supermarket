@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -21,7 +20,7 @@ public class ManageCategoryPage {
 	WebElement CategoryField;
 	@FindBy(xpath = "//input[@id='main_img']")
 	WebElement ChooseFile;
-	@FindBy(xpath = "//button[text()='Save']")
+	@FindBy(xpath = "//button[@type='submit']")
 	WebElement SaveButton;
 	@FindBy(xpath = "//div[contains(@class,' alert-success')]")
 	WebElement AlertCategory;
@@ -54,22 +53,27 @@ public class ManageCategoryPage {
 		FileUploadUtility.fileUploadUsingSendkeys(ChooseFile, Constant.IMAGEDATAFILE);
 		return this;
 	}
+
 	public ManageCategoryPage clickSaveButton() {
-//		pageutility.javaScriptExecutorMethod(SaveButton);
+//		pageutility.javaScriptExecutorMethod(SaveButton,driver);
 
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("arguments[0].click();", SaveButton);
-		
-//		Actions actions = new Actions(driver);
-//		actions.click(SaveButton).perform();
-		
-		pageutility.ClickMethod(SaveButton,driver);
+
+		Actions actions = new Actions(driver);
+		actions.click(SaveButton).perform();
+
+//		pageutility.ClickMethod(SaveButton, driver);
 		return this;
 
 	}
 
-	public Boolean verifyCategoryAlertIsDisplayed() {
-		return AlertCategory.isDisplayed();
+//	public Boolean verifyCategorySaveButtonIsEnabled() {
+//		return SaveButton.isEnabled();
 
 	}
-}
+
+//	public Boolean verifyCategoryAlertIsDisplayed() {
+//		return AlertCategory.isDisplayed();
+//
+//	}

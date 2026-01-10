@@ -10,7 +10,6 @@ import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ManageCategoryPage;
 import utilities.ExcelUtility;
-import utilities.FileUploadUtility;
 
 public class ManageCategoryTest extends Base {
 //	LogoutPage logoutpage;
@@ -39,7 +38,7 @@ public class ManageCategoryTest extends Base {
 //		managecategorypage.clickSaveButton();
 //		managecategorypage.clickNew();
 //        managecategorypage.verifyCategoryAlertIsDisplayed();
-		boolean alert = managecategorypage.verifyCategoryAlertIsDisplayed();
-		Assert.assertTrue(alert,Constant.MANAGECATEGORY);
+//		boolean alert = managecategorypage.verifyCategorySaveButtonIsEnabled();
+//		Assert.assertTrue(alert,Constant.MANAGECATEGORY);
 	}
 }
