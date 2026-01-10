@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageContactPage {
 	public WebDriver driver;
+	PageUtility pageutility = new PageUtility();
 //	@FindBy(xpath="//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-contact']")WebElement ContactMoreInfo;
 	@FindBy(xpath = "//a[@role='button' and @href='https://groceryapp.uniqassosiates.com/admin/contact/edit_contact?edit=1']")
 	WebElement ActionButton;
@@ -66,6 +69,7 @@ public class ManageContactPage {
 //	}
 	public ManageContactPage clickUpdateButton() {
 		UpdateButton.click();
+//		pageutility.ClickMethod(UpdateButton);
 		return this;
 	}
 
