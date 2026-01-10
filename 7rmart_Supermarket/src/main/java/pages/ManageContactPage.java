@@ -68,8 +68,8 @@ public class ManageContactPage {
 //		
 //	}
 	public ManageContactPage clickUpdateButton() {
-		UpdateButton.click();
-//		pageutility.ClickMethod(UpdateButton);
+//		UpdateButton.click();
+		pageutility.ClickMethod(UpdateButton,driver);
 		return this;
 	}
 

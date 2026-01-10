@@ -1,46 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-10T11:11:36 IST" name="Suite" finished-at="2026-01-10T11:11:58 IST" duration-ms="21896">
+  <suite started-at="2026-01-10T11:21:30 IST" name="Suite" finished-at="2026-01-10T11:21:41 IST" duration-ms="10141">
     <groups>
       <group name="regression">
-        <method signature="ManageContactTest.verifyContact()[pri:1, instance:testscript.ManageContactTest@21be3395]" name="verifyContact" class="testscript.ManageContactTest"/>
-        <method signature="ManageFooterTextTest.verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@7d322cad]" name="verifyFooterText" class="testscript.ManageFooterTextTest"/>
-        <method signature="ManageNewsTest.verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@2254127a]" name="verifyManageNews" class="testscript.ManageNewsTest"/>
+        <method signature="ManageContactTest.verifyContact()[pri:1, instance:testscript.ManageContactTest@14dd7b39]" name="verifyContact" class="testscript.ManageContactTest"/>
       </group> <!-- regression -->
     </groups>
-    <test started-at="2026-01-10T11:11:36 IST" name="Test" finished-at="2026-01-10T11:11:58 IST" duration-ms="21896">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@2254127a]" started-at="2026-01-10T11:11:36 IST" name="browserInitialization" finished-at="2026-01-10T11:11:40 IST" duration-ms="3413" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserInitialization -->
-        <test-method signature="verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@2254127a]" started-at="2026-01-10T11:11:40 IST" name="verifyManageNews" description="Testcase to enter new product launch details" finished-at="2026-01-10T11:11:45 IST" duration-ms="4801" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyManageNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@2254127a]" started-at="2026-01-10T11:11:45 IST" name="browserQuit" finished-at="2026-01-10T11:11:45 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyManageNews status=SUCCESS method=ManageNewsTest.verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@2254127a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageNewsTest -->
+    <test started-at="2026-01-10T11:21:30 IST" name="Test" finished-at="2026-01-10T11:21:41 IST" duration-ms="10141">
       <class name="testscript.ManageContactTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@21be3395]" started-at="2026-01-10T11:11:51 IST" name="browserInitialization" finished-at="2026-01-10T11:11:55 IST" duration-ms="4131" status="PASS">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@14dd7b39]" started-at="2026-01-10T11:21:30 IST" name="browserInitialization" finished-at="2026-01-10T11:21:34 IST" duration-ms="3548" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,15 +21,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="verifyContact()[pri:1, instance:testscript.ManageContactTest@21be3395]" started-at="2026-01-10T11:11:55 IST" name="verifyContact" description="Testcase to update contact and delivery details" finished-at="2026-01-10T11:11:58 IST" duration-ms="3664" status="PASS">
+        <test-method signature="verifyContact()[pri:1, instance:testscript.ManageContactTest@14dd7b39]" started-at="2026-01-10T11:21:34 IST" name="verifyContact" description="Testcase to update contact and delivery details" finished-at="2026-01-10T11:21:41 IST" duration-ms="6487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContact -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageContactTest@21be3395]" started-at="2026-01-10T11:11:58 IST" name="browserQuit" finished-at="2026-01-10T11:11:58 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageContactTest@14dd7b39]" started-at="2026-01-10T11:21:41 IST" name="browserQuit" finished-at="2026-01-10T11:21:41 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyContact status=SUCCESS method=ManageContactTest.verifyContact()[pri:1, instance:testscript.ManageContactTest@21be3395] output={null}]]]>
+                <![CDATA[[TestResult name=verifyContact status=SUCCESS method=ManageContactTest.verifyContact()[pri:1, instance:testscript.ManageContactTest@14dd7b39] output={null}]]]>
               </value>
             </param>
           </params>
@@ -67,34 +37,6 @@
           </reporter-output>
         </test-method> <!-- browserQuit -->
       </class> <!-- testscript.ManageContactTest -->
-      <class name="testscript.ManageFooterTextTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageFooterTextTest@7d322cad]" started-at="2026-01-10T11:11:45 IST" name="browserInitialization" finished-at="2026-01-10T11:11:48 IST" duration-ms="2894" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserInitialization -->
-        <test-method signature="verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@7d322cad]" started-at="2026-01-10T11:11:48 IST" name="verifyFooterText" description="Testcase to update user email and phone number" finished-at="2026-01-10T11:11:51 IST" duration-ms="2900" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFooterText -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageFooterTextTest@7d322cad]" started-at="2026-01-10T11:11:51 IST" name="browserQuit" finished-at="2026-01-10T11:11:51 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyFooterText status=SUCCESS method=ManageFooterTextTest.verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@7d322cad] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageFooterTextTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

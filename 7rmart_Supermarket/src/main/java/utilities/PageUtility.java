@@ -46,7 +46,7 @@ public class PageUtility {
 		actions.moveToElement(element).perform();
 	}
 
-	public void ClickMethod(WebElement element) {
+	public void ClickMethod(WebElement element,WebDriver driver) {
 		Actions actions = new Actions(driver);
 		actions.click(element).perform();
 	}
