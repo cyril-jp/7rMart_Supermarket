@@ -23,6 +23,8 @@ public class AdminUsersPage {
 	WebElement SaveButton;
 	@FindBy(xpath = "//div[contains(@class,' alert-success')]")
 	WebElement AlertAdminUser;
+	@FindBy(xpath = "//div[contains(@class,' alert-danger')]")
+	WebElement AlertAdminUserExisting;
 
 	public AdminUsersPage(WebDriver driver) {
 		this.driver = driver;
@@ -60,11 +62,7 @@ public class AdminUsersPage {
 //		select.selectByValue("partner");
 	}
 
-//	public Boolean verifyAdminUserPageIsDisplayed()
-//	{
-//		return AdminUsersPage.isDisplayed();
-//		
-//	}
+
 	public AdminUsersPage clickSaveButton() {
 		SaveButton.click();
 		return this;

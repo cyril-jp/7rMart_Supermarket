@@ -2,12 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-12T13:24:56 IST" name="Suite" finished-at="2026-01-12T13:25:08 IST" duration-ms="12269">
+  <suite started-at="2026-01-12T13:36:55 IST" name="Suite" finished-at="2026-01-12T13:37:09 IST" duration-ms="13812">
     <groups>
+      <group name="regression">
+        <method signature="AdminUsersTest.verifyAdminUser()[pri:1, instance:testscript.AdminUsersTest@14dd7b39]" name="verifyAdminUser" class="testscript.AdminUsersTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2026-01-12T13:24:56 IST" name="Test" finished-at="2026-01-12T13:25:08 IST" duration-ms="12269">
-      <class name="testscript.ManageCategoryTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageCategoryTest@14dd7b39]" started-at="2026-01-12T13:24:56 IST" name="browserInitialization" finished-at="2026-01-12T13:24:58 IST" duration-ms="2414" status="PASS">
+    <test started-at="2026-01-12T13:36:55 IST" name="Test" finished-at="2026-01-12T13:37:09 IST" duration-ms="13812">
+      <class name="testscript.AdminUsersTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.AdminUsersTest@14dd7b39]" started-at="2026-01-12T13:36:55 IST" name="browserInitialization" finished-at="2026-01-12T13:37:04 IST" duration-ms="8512" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +21,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="verifyContact()[pri:1, instance:testscript.ManageCategoryTest@14dd7b39]" started-at="2026-01-12T13:24:58 IST" name="verifyContact" description="Testcase to add new grocery to the list" finished-at="2026-01-12T13:25:08 IST" duration-ms="9440" status="PASS">
+        <test-method signature="verifyAdminUser()[pri:1, instance:testscript.AdminUsersTest@14dd7b39]" started-at="2026-01-12T13:37:04 IST" name="verifyAdminUser" description="Testcase to add new user credentials" finished-at="2026-01-12T13:37:09 IST" duration-ms="4747" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyContact -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTest@14dd7b39]" started-at="2026-01-12T13:25:08 IST" name="browserQuit" finished-at="2026-01-12T13:25:08 IST" duration-ms="336" status="PASS">
+        </test-method> <!-- verifyAdminUser -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminUsersTest@14dd7b39]" started-at="2026-01-12T13:37:09 IST" name="browserQuit" finished-at="2026-01-12T13:37:09 IST" duration-ms="461" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyContact status=SUCCESS method=ManageCategoryTest.verifyContact()[pri:1, instance:testscript.ManageCategoryTest@14dd7b39] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAdminUser status=SUCCESS method=AdminUsersTest.verifyAdminUser()[pri:1, instance:testscript.AdminUsersTest@14dd7b39] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageCategoryTest -->
+      </class> <!-- testscript.AdminUsersTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
