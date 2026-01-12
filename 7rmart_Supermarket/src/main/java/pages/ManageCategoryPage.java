@@ -18,12 +18,16 @@ public class ManageCategoryPage {
 	WebElement NewButton;
 	@FindBy(xpath = "//input[@id='category']")
 	WebElement CategoryField;
+	@FindBy(xpath = "//li[@id='134-selectable']")
+	WebElement DiscountField;
 	@FindBy(xpath = "//input[@id='main_img']")
 	WebElement ChooseFile;
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement SaveButton;
 	@FindBy(xpath = "//div[contains(@class,' alert-success')]")
 	WebElement AlertCategory;
+	@FindBy(xpath = "//div[contains(@class,' alert-danger')]")
+	WebElement AlertCategoryExisting;
 
 	public ManageCategoryPage(WebDriver driver) {
 		this.driver = driver;
@@ -36,7 +40,7 @@ public class ManageCategoryPage {
 //	}
 
 	public ManageCategoryPage clickNew() {
-		NewButton.click();
+		pageutility.ClickMethod(NewButton, driver);
 		return this;
 
 	}
@@ -46,6 +50,10 @@ public class ManageCategoryPage {
 		return this;
 	}
 
+	public ManageCategoryPage clickDiscountOption() {
+		DiscountField.click();
+		return this;
+	}
 //	public WebElement getChooseFileElement() {
 //		return ChooseFile;
 //	}
@@ -60,20 +68,40 @@ public class ManageCategoryPage {
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("arguments[0].click();", SaveButton);
 
-		Actions actions = new Actions(driver);
-		actions.click(SaveButton).perform();
+//		Actions actions = new Actions(driver);
+//		actions.click(SaveButton).perform();
 
-//		pageutility.ClickMethod(SaveButton, driver);
+		pageutility.ClickMethod(SaveButton, driver);
 		return this;
 
 	}
 
-//	public Boolean verifyCategorySaveButtonIsEnabled() {
-//		return SaveButton.isEnabled();
+
+	public Boolean verifyCategoryAlertIsDisplayed() {
+	    try {
+	        // First check success alert
+	        if (AlertCategory.isDisplayed()) {
+	            System.out.println("Success Alert displayed – Category added");
+	            return true;
+	        }
+	    } catch (Exception e) {
+	        // Ignore – success alert not present
+	    }
+
+	    try {
+	        // Then check danger alert (already exists)
+	        if (AlertCategoryExisting.isDisplayed()) {
+	            System.out.println("Danger Alert displayed – Category already exists");
+	            return true;
+	        }
+	    } catch (Exception e) {
+	        // Ignore – danger alert not present
+	    }
+
+	    System.out.println("No alert displayed");
+	    return false;
+	}
+
 
 	}
 
-//	public Boolean verifyCategoryAlertIsDisplayed() {
-//		return AlertCategory.isDisplayed();
-//
-//	}

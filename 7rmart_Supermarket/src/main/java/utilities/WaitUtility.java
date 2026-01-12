@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtility {
 	public static final int IMPLICITEWAIT = 5;
-	public static final int EXPLICITEWAIT = 10;
+	public static final int EXPLICITEWAIT = 10;//this wait works on condition basis
 
 	public void waitForElementToBeClickable(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITEWAIT));
@@ -17,7 +17,7 @@ public class WaitUtility {
 	}
 
 	public void waitForVisibility(WebDriver driver, WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITEWAIT));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 

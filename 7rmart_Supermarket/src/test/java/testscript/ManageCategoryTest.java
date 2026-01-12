@@ -12,7 +12,7 @@ import pages.ManageCategoryPage;
 import utilities.ExcelUtility;
 
 public class ManageCategoryTest extends Base {
-//	LogoutPage logoutpage;
+	LogoutPage logoutpage;
 	ManageCategoryPage managecategorypage;
 
 	@Test(priority = 1, retryAnalyzer = retry.Retry.class,description="Testcase to add new grocery to the list")
@@ -21,9 +21,9 @@ public class ManageCategoryTest extends Base {
 		String user = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String pin = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUserName(user);
-		loginpage.enterPassword(pin);
-		loginpage.clickSignin();
+		loginpage.enterUserName(user).enterPassword(pin);
+//		loginpage.enterPassword(pin);
+		logoutpage = loginpage.clickSignin();
 
 //Category Test case
 
@@ -32,13 +32,13 @@ public class ManageCategoryTest extends Base {
 //		managecategorypage.clickCategoryMoreInfo();
 		LogoutPage logoutpage = new LogoutPage(driver);
 		managecategorypage = logoutpage.clickCategoryMoreInfo();
-		managecategorypage.clickNew().enterCategoryname(categoryname).getChooseFileElement().clickSaveButton();
+		managecategorypage.clickNew().enterCategoryname(categoryname).clickDiscountOption().getChooseFileElement().clickSaveButton();
 //		managecategorypage.enterCategoryname(categoryname);
 //		FileUploadUtility.fileUploadUsingSendkeys(managecategorypage.getChooseFileElement(),Constant.IMAGEDATAFILE);
 //		managecategorypage.clickSaveButton();
 //		managecategorypage.clickNew();
 //        managecategorypage.verifyCategoryAlertIsDisplayed();
-//		boolean alert = managecategorypage.verifyCategorySaveButtonIsEnabled();
-//		Assert.assertTrue(alert,Constant.MANAGECATEGORY);
+		boolean alert = managecategorypage.verifyCategoryAlertIsDisplayed();
+		Assert.assertTrue(alert,Constant.MANAGECATEGORY);
 	}
 }

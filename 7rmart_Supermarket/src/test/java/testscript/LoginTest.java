@@ -8,10 +8,12 @@ import org.testng.annotations.Test;
 
 import constant.Constant;
 import pages.LoginPage;
+import pages.LogoutPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base
 {
+	LogoutPage logoutpage;
 @Test(priority=1,description="Testcase to check user is login with valid username and password")
 public void verifyTheUserIsAbleToLoginWithValidCredentials() throws IOException
 {
@@ -21,9 +23,10 @@ public void verifyTheUserIsAbleToLoginWithValidCredentials() throws IOException
 	String pin=ExcelUtility.readStringData(1, 1, "LoginPage");
 //	String news=ExcelUtility.readStringData(0, 0, "ManageNews");
 	LoginPage loginpage=new LoginPage(driver);
-	loginpage.enterUserName(user);
-	loginpage.enterPassword(pin);
-	loginpage.clickSignin();
+	loginpage.enterUserName(user).enterPassword(pin);
+//	loginpage.enterPassword(pin);
+//	loginpage.clickSignin();
+	logoutpage = loginpage.clickSignin();
 	boolean homepage=loginpage.verifyHomePageIsDisplayed();
 	Assert.assertTrue(homepage,Constant.LOGINVALIDCREDENTIALS);
 }
@@ -35,9 +38,10 @@ public void verifyTheUserIsAbleToLoginWithIncorrectUsernameCorrectPin() throws I
 	String user=ExcelUtility.readStringData(2, 0, "LoginPage");
 	String pin=ExcelUtility.readStringData(2, 1, "LoginPage");
 	LoginPage loginpage=new LoginPage(driver);
-	loginpage.enterUserName(user);
-	loginpage.enterPassword(pin);
-	loginpage.clickSignin();
+	loginpage.enterUserName(user).enterPassword(pin);
+//	loginpage.enterPassword(pin);
+//	loginpage.clickSignin();
+	logoutpage = loginpage.clickSignin();
 	boolean alert=loginpage.verifyAlertIsDisplayed();
 	Assert.assertTrue(alert,Constant.LOGININVALIDUSERNAME);
 }
@@ -49,9 +53,10 @@ public void verifyTheUserIsAbleToLoginWithCorrectUsernameIncorrectPin() throws I
 	String user=ExcelUtility.readStringData(3, 0, "LoginPage");
 	String pin=ExcelUtility.readStringData(3, 1, "LoginPage");
 	LoginPage loginpage=new LoginPage(driver);
-	loginpage.enterUserName(user);
-	loginpage.enterPassword(pin);
-	loginpage.clickSignin();
+	loginpage.enterUserName(user).enterPassword(pin);
+//	loginpage.enterPassword(pin);
+//	loginpage.clickSignin();
+	logoutpage = loginpage.clickSignin();
 	boolean alert=loginpage.verifyAlertIsDisplayed();
 	Assert.assertTrue(alert,Constant.LOGININVALIDPIN);
 }
@@ -64,9 +69,10 @@ public void verifyTheUserIsAbleToLoginWithIncorrectUsernameIncorrectPin(String u
 //	String pin=ExcelUtility.readStringData(4, 1, "LoginPage");
 	
 	LoginPage loginpage=new LoginPage(driver);
-	loginpage.enterUserName(user);
-	loginpage.enterPassword(pin);
-	loginpage.clickSignin();
+	loginpage.enterUserName(user).enterPassword(pin);
+//	loginpage.enterPassword(pin);
+//	loginpage.clickSignin();
+	logoutpage = loginpage.clickSignin();
 	boolean alert=loginpage.verifyAlertIsDisplayed();
 	Assert.assertTrue(alert,Constant.LOGININVALIDCREDENTIALS);
 }

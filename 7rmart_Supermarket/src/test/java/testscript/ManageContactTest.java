@@ -12,7 +12,7 @@ import pages.ManageContactPage;
 import utilities.ExcelUtility;
 
 public class ManageContactTest extends Base {
-//	LogoutPage logoutpage;
+	LogoutPage logoutpage;
 	ManageContactPage managecontactpage;
 
 	@Test(priority = 1, groups = { "regression" },description="Testcase to update contact and delivery details")
@@ -21,10 +21,9 @@ public class ManageContactTest extends Base {
 		String user = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String pin = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUserName(user);
-		loginpage.enterPassword(pin);
-		loginpage.clickSignin();
-
+		loginpage.enterUserName(user).enterPassword(pin);
+//		loginpage.enterPassword(pin);
+		logoutpage = loginpage.clickSignin();
 		// Contact text Test case
 
 		ManageContactPage managecontactpage = new ManageContactPage(driver);
