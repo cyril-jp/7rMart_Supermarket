@@ -56,6 +56,7 @@ public class Base {
 			ScreenshotUtility scrShot = new ScreenshotUtility(); // creating obj
 			scrShot.getScreenShot(driver, iTestResult.getName());
 		}
+		driver.quit();
 //	public void browserclose()
 //	{
 //		driver.close();
