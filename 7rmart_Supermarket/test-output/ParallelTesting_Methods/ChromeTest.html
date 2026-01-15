@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 12 13:44:32 IST 2026</td>
+<td>Started on:</td><td>Thu Jan 15 13:54:47 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4925 ms)</td>
+<tr><td>Total time:</td><td>8 seconds (8245 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,111 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testscript.LoginTest.browserQuit()'><b>browserQuit</b><br>Test class: testscript.LoginTest<br>Parameters: [TestResult name=verifyTheUserIsAbleToLoginWithIncorrectUsernameCorrectPin status=FAILURE method=LoginTest.verifyTheUserIsAbleToLoginWithIncorrectUsernameCorrectPin()[pri:2, instance:testscript.LoginTest@702657cc] output={null}]</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [deb85788e2a536f74ccc36ea851c2762, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\ACER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:5437}, goog:processID: 13100, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:5437/devtool..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: deb85788e2a536f74ccc36ea851c2762
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
-	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
-	at testscript.Base.browserQuit(Base.java:59)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@2e9d5495[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@6fa05eae[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda$602/0x0000020e181eb238@6b9fc782]] rejected from java.util.concurrent.ThreadPoolExecutor@72c17d88[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 52]
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
-	... 29 more
-Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@2e9d5495[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@6fa05eae[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda$602/0x0000020e181eb238@6b9fc782]] rejected from java.util.concurrent.ThreadPoolExecutor@72c17d88[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 52]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-	... 3 more
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace703035937", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace703035937'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [deb85788e2a536f74ccc36ea851c2762, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\ACER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:5437}, goog:processID: 13100, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:5437/devtool..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: deb85788e2a536f74ccc36ea851c2762
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
-	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
-	at testscript.Base.browserQuit(Base.java:59)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@2e9d5495[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@6fa05eae[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda$602/0x0000020e181eb238@6b9fc782]] rejected from java.util.concurrent.ThreadPoolExecutor@72c17d88[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 52]
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
-	... 29 more
-Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@2e9d5495[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@6fa05eae[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda$602/0x0000020e181eb238@6b9fc782]] rejected from java.util.concurrent.ThreadPoolExecutor@72c17d88[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 52]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-	... 3 more
-</pre></div></td>
-<td>0</td>
-<td>testscript.LoginTest@702657cc</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -181,7 +76,7 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testscript.LoginTest.verifyTheUserIsAbleToLoginWithValidCredentials()'><b>verifyTheUserIsAbleToLoginWithValidCredentials</b><br>Test class: testscript.LoginTest<br>Test method: Testcase to check user is login with valid username and password</td>
+<td title='testscript.ManageFooterTextTest.verifyFooterText()'><b>verifyFooterText</b><br>Test class: testscript.ManageFooterTextTest<br>Test method: Testcase to update user email and phone number</td>
 <td><div><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
 	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
 	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
@@ -191,7 +86,7 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
 	at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
-	at testscript.LoginTest.verifyTheUserIsAbleToLoginWithValidCredentials(LoginTest.java:22)
+	at testscript.ManageFooterTextTest.verifyFooterText(ManageFooterTextTest.java:21)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
@@ -201,8 +96,8 @@ Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDDE95689
 	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
 	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
 	... 26 more
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1027080084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1027080084'><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace102518404", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace102518404'><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
 	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
 	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
 	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
@@ -211,7 +106,7 @@ Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDDE95689
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
 	at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
-	at testscript.LoginTest.verifyTheUserIsAbleToLoginWithValidCredentials(LoginTest.java:22)
+	at testscript.ManageFooterTextTest.verifyFooterText(ManageFooterTextTest.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -235,10 +130,10 @@ Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDDE95689
 	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
 	... 26 more
 </pre></div></td>
-<td>0</td>
-<td>testscript.LoginTest@702657cc</td></tr>
+<td>1</td>
+<td>testscript.ManageFooterTextTest@6a78afa0</td></tr>
 <tr>
-<td title='testscript.LoginTest.verifyTheUserIsAbleToLoginWithIncorrectUsernameCorrectPin()'><b>verifyTheUserIsAbleToLoginWithIncorrectUsernameCorrectPin</b><br>Test class: testscript.LoginTest<br>Test method: Testcase to check user is login with invalid username and valid password</td>
+<td title='testscript.ManageNewsTest.verifyManageNews()'><b>verifyManageNews</b><br>Test class: testscript.ManageNewsTest<br>Test method: Testcase to enter new product launch details</td>
 <td><div><pre>java.io.IOException: Stream Closed
 	at java.base/java.io.FileInputStream.available0(Native Method)
 	at java.base/java.io.FileInputStream.available(FileInputStream.java:415)
@@ -262,14 +157,14 @@ Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDDE95689
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
 	at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
-	at testscript.LoginTest.verifyTheUserIsAbleToLoginWithIncorrectUsernameCorrectPin(LoginTest.java:38)
+	at testscript.ManageNewsTest.verifyManageNews(ManageNewsTest.java:21)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace581347219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace581347219'><pre>java.io.IOException: Stream Closed
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1282508010", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1282508010'><pre>java.io.IOException: Stream Closed
 	at java.base/java.io.FileInputStream.available0(Native Method)
 	at java.base/java.io.FileInputStream.available(FileInputStream.java:415)
 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
@@ -292,7 +187,7 @@ Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDDE95689
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
 	at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
-	at testscript.LoginTest.verifyTheUserIsAbleToLoginWithIncorrectUsernameCorrectPin(LoginTest.java:38)
+	at testscript.ManageNewsTest.verifyManageNews(ManageNewsTest.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -313,7 +208,7 @@ Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDDE95689
 	at java.base/java.lang.Thread.run(Thread.java:842)
 </pre></div></td>
 <td>0</td>
-<td>testscript.LoginTest@702657cc</td></tr>
+<td>testscript.ManageNewsTest@51399530</td></tr>
 </table><p>
 </body>
 </html>

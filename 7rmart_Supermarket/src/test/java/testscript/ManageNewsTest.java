@@ -27,7 +27,7 @@ public class ManageNewsTest extends Base {
 
 //managenews Test case
 
-		ManageNewsPage managenewspage = new ManageNewsPage(driver);
+//		ManageNewsPage managenewspage = new ManageNewsPage(driver);
 		String news = ExcelUtility.readStringData(0, 0, "ManageNews");
 		LogoutPage logoutpage = new LogoutPage(driver);
 		managenewspage = logoutpage.clickManageNewsMoreInfo();

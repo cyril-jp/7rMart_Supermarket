@@ -2,90 +2,16 @@
 <testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-12T13:44:54 IST" name="ParallelTesting" finished-at="2026-01-12T13:45:02 IST" duration-ms="7848">
+  <suite started-at="2026-01-15T13:54:47 IST" name="ParallelTesting_Methods" finished-at="2026-01-15T13:54:55 IST" duration-ms="8245">
     <groups>
       <group name="regression">
-        <method signature="ManageNewsTest.verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@5e0e82ae]" name="verifyManageNews" class="testscript.ManageNewsTest"/>
-        <method signature="ManageFooterTextTest.verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@8297b3a]" name="verifyFooterText" class="testscript.ManageFooterTextTest"/>
+        <method signature="ManageFooterTextTest.verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@6a78afa0]" name="verifyFooterText" class="testscript.ManageFooterTextTest"/>
+        <method signature="ManageNewsTest.verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@51399530]" name="verifyManageNews" class="testscript.ManageNewsTest"/>
       </group> <!-- regression -->
     </groups>
-    <test started-at="2026-01-12T13:44:54 IST" name="Test2" finished-at="2026-01-12T13:45:02 IST" duration-ms="7823">
-      <class name="testscript.ManageFooterTextTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageFooterTextTest@8297b3a]" started-at="2026-01-12T13:44:54 IST" name="browserInitialization" finished-at="2026-01-12T13:45:00 IST" duration-ms="6269" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserInitialization -->
-        <test-method signature="verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@8297b3a]" started-at="2026-01-12T13:45:00 IST" name="verifyFooterText" description="Testcase to update user email and phone number" finished-at="2026-01-12T13:45:01 IST" duration-ms="976" status="FAIL">
-          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
-            <message>
-              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
-at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
-at testscript.ManageFooterTextTest.verifyFooterText(ManageFooterTextTest.java:21)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDDE95689
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFooterText -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageFooterTextTest@8297b3a]" started-at="2026-01-12T13:45:01 IST" name="browserQuit" finished-at="2026-01-12T13:45:02 IST" duration-ms="495" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyFooterText status=FAILURE method=ManageFooterTextTest.verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@8297b3a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageFooterTextTest -->
-    </test> <!-- Test2 -->
-    <test started-at="2026-01-12T13:44:54 IST" name="Test1" finished-at="2026-01-12T13:45:02 IST" duration-ms="7848">
+    <test started-at="2026-01-15T13:54:47 IST" name="ChromeTest" finished-at="2026-01-15T13:54:55 IST" duration-ms="8245">
       <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@5e0e82ae]" started-at="2026-01-12T13:44:54 IST" name="browserInitialization" finished-at="2026-01-12T13:45:00 IST" duration-ms="6261" status="PASS">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@51399530]" started-at="2026-01-15T13:54:47 IST" name="browserInitialization" finished-at="2026-01-15T13:54:53 IST" duration-ms="6723" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -96,7 +22,7 @@ at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(Zip
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@5e0e82ae]" started-at="2026-01-12T13:45:00 IST" name="verifyManageNews" description="Testcase to enter new product launch details" finished-at="2026-01-12T13:45:01 IST" duration-ms="1037" status="FAIL">
+        <test-method signature="verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@51399530]" started-at="2026-01-15T13:54:53 IST" name="verifyManageNews" description="Testcase to enter new product launch details" finished-at="2026-01-15T13:54:54 IST" duration-ms="590" status="FAIL">
           <exception class="java.io.IOException">
             <message>
               <![CDATA[Stream Closed]]>
@@ -138,13 +64,9 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 at java.base/java.lang.Thread.run(Thread.java:842)
@@ -154,11 +76,11 @@ at java.base/java.lang.Thread.run(Thread.java:842)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyManageNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@5e0e82ae]" started-at="2026-01-12T13:45:01 IST" name="browserQuit" finished-at="2026-01-12T13:45:02 IST" duration-ms="472" status="PASS">
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@51399530]" started-at="2026-01-15T13:54:54 IST" name="browserQuit" finished-at="2026-01-15T13:54:55 IST" duration-ms="833" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyManageNews status=FAILURE method=ManageNewsTest.verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@5e0e82ae] output={null}]]]>
+                <![CDATA[[TestResult name=verifyManageNews status=FAILURE method=ManageNewsTest.verifyManageNews()[pri:1, instance:testscript.ManageNewsTest@51399530] output={null}]]]>
               </value>
             </param>
           </params>
@@ -166,6 +88,74 @@ at java.base/java.lang.Thread.run(Thread.java:842)
           </reporter-output>
         </test-method> <!-- browserQuit -->
       </class> <!-- testscript.ManageNewsTest -->
-    </test> <!-- Test1 -->
-  </suite> <!-- ParallelTesting -->
+      <class name="testscript.ManageFooterTextTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageFooterTextTest@6a78afa0]" started-at="2026-01-15T13:54:47 IST" name="browserInitialization" finished-at="2026-01-15T13:54:53 IST" duration-ms="6193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@6a78afa0]" started-at="2026-01-15T13:54:53 IST" name="verifyFooterText" description="Testcase to update user email and phone number" finished-at="2026-01-15T13:54:54 IST" duration-ms="1073" status="FAIL">
+          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
+            <message>
+              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
+at testscript.ManageFooterTextTest.verifyFooterText(ManageFooterTextTest.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDDE95689
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFooterText -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageFooterTextTest@6a78afa0]" started-at="2026-01-15T13:54:54 IST" name="browserQuit" finished-at="2026-01-15T13:54:55 IST" duration-ms="721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFooterText status=FAILURE method=ManageFooterTextTest.verifyFooterText()[pri:1, instance:testscript.ManageFooterTextTest@6a78afa0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+      </class> <!-- testscript.ManageFooterTextTest -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- ParallelTesting_Methods -->
 </testng-results>

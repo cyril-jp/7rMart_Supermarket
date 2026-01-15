@@ -27,7 +27,7 @@ public class ManageFooterTextTest extends Base {
 
 		// footer text Test case
 
-		ManageFooterTextPage managefootertextpage = new ManageFooterTextPage(driver);
+//		ManageFooterTextPage managefootertextpage = new ManageFooterTextPage(driver);
 		String email = ExcelUtility.readStringData(1, 0, "ManageFooterText");
 		String phone = ExcelUtility.readIntegerData(1, 1, "ManageFooterText");
 		LogoutPage logoutpage = new LogoutPage(driver);

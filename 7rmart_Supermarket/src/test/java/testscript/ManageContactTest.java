@@ -26,7 +26,7 @@ public class ManageContactTest extends Base {
 		logoutpage = loginpage.clickSignin();
 		// Contact text Test case
 
-		ManageContactPage managecontactpage = new ManageContactPage(driver);
+//		ManageContactPage managecontactpage = new ManageContactPage(driver);
 		String email = ExcelUtility.readStringData(1, 0, "ManageContact");
 		String phone = ExcelUtility.readIntegerData(1, 1, "ManageContact");
 		String time = ExcelUtility.readIntegerData(1, 2, "ManageContact");

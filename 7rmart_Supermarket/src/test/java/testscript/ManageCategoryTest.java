@@ -27,7 +27,7 @@ public class ManageCategoryTest extends Base {
 
 //Category Test case
 
-		ManageCategoryPage managecategorypage = new ManageCategoryPage(driver);
+//		ManageCategoryPage managecategorypage = new ManageCategoryPage(driver);
 		String categoryname = ExcelUtility.readStringData(1, 0, "ManageCategory");
 //		managecategorypage.clickCategoryMoreInfo();
 		LogoutPage logoutpage = new LogoutPage(driver);
