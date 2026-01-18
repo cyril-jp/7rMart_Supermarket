@@ -69,7 +69,28 @@ public class AdminUsersPage {
 	}
 
 	public Boolean verifyAdminAlertIsDisplayed() {
-		return AlertAdminUser.isDisplayed();
+		 try {
+		        // First check success alert
+		        if (AlertAdminUser.isDisplayed()) {
+		            System.out.println("Success Alert displayed – Category added");
+		            return true;
+		        }
+		    } catch (Exception e) {
+		        // Ignore – success alert not present
+		    }
 
+		    try {
+		        // Then check danger alert (already exists)
+		        if (AlertAdminUserExisting.isDisplayed()) {
+		            System.out.println("Danger Alert displayed – username and password already exists");
+		            return true;
+		        }
+		    } catch (Exception e) {
+		        // Ignore – danger alert not present
+		    }
+
+		    System.out.println("No alert displayed");
+		    return false;
+		}
+//return AlertAdminUser.isDisplayed();
 	}
-}

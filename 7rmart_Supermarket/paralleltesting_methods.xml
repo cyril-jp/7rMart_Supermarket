@@ -21,7 +21,5 @@
       <class name="testscript.ManageNewsTest"/>
       <class name="testscript.ManageFooterTextTest"/> -->
 		</classes>
-	</test> <!--
-	Test -->
-</suite> <!--
-Suite -->
+	</test> <!--Test -->
+</suite> <!--Suite -->
