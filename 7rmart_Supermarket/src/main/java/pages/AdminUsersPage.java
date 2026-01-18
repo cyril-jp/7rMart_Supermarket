@@ -62,35 +62,34 @@ public class AdminUsersPage {
 //		select.selectByValue("partner");
 	}
 
-
 	public AdminUsersPage clickSaveButton() {
 		SaveButton.click();
 		return this;
 	}
 
 	public Boolean verifyAdminAlertIsDisplayed() {
-		 try {
-		        // First check success alert
-		        if (AlertAdminUser.isDisplayed()) {
-		            System.out.println("Success Alert displayed – Category added");
-		            return true;
-		        }
-		    } catch (Exception e) {
-		        // Ignore – success alert not present
-		    }
-
-		    try {
-		        // Then check danger alert (already exists)
-		        if (AlertAdminUserExisting.isDisplayed()) {
-		            System.out.println("Danger Alert displayed – username and password already exists");
-		            return true;
-		        }
-		    } catch (Exception e) {
-		        // Ignore – danger alert not present
-		    }
-
-		    System.out.println("No alert displayed");
-		    return false;
+		try {
+			// First check success alert
+			if (AlertAdminUser.isDisplayed()) {
+				System.out.println("Success Alert displayed – Category added");
+				return true;
+			}
+		} catch (Exception e) {
+			// Ignore – success alert not present
 		}
-//return AlertAdminUser.isDisplayed();
+
+		try {
+			// Then check danger alert (already exists)
+			if (AlertAdminUserExisting.isDisplayed()) {
+				System.out.println("Danger Alert displayed – username and password already exists");
+				return true;
+			}
+		} catch (Exception e) {
+			// Ignore – danger alert not present
+		}
+
+		System.out.println("No alert displayed");
+		return false;
 	}
+//return AlertAdminUser.isDisplayed();
+}
